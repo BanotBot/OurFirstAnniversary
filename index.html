@@ -362,7 +362,7 @@
                 <p class="message-text">
                     Thank you for being you, for loving me, and for sharing this incredible journey with me. My love for you grows stronger with each passing day.
                 </p>
-                <div class="message-signature">Forever Yours</div>
+                <div class="message-signature">Ivan Dave </div>
             </div>
             
             <div class="music-player">
@@ -417,15 +417,10 @@
             floatingHearts.appendChild(heart);
         }
         
-        // Calculate days since anniversary (assuming they met 2 years ago)
-        const anniversaryDate = new Date();
-        anniversaryDate.setFullYear(anniversaryDate.getFullYear() - 2);
+        // Set to exactly 365 days (1 year anniversary)
+        const targetDays = 365;
         
-        const today = new Date();
-        const timeDiff = today.getTime() - anniversaryDate.getTime();
-        const daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
-        
-        document.getElementById('daysCount').textContent = daysDiff.toLocaleString();
+        document.getElementById('daysCount').textContent = targetDays.toLocaleString();
         
         // Music player functionality
         const audio = new Audio('/songs/Rob Deniel - Sinta (Official Lyric Visualizer).mp3');
@@ -472,7 +467,7 @@
         // Add a count-up animation for the days counter
         let count = 0;
         const daysElement = document.getElementById('daysCount');
-        const targetCount = daysDiff;
+        const targetCount = targetDays; // Changed to 365
         const increment = targetCount / 100;
         
         const updateCount = () => {
